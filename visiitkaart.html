@@ -6,7 +6,7 @@
     <title>Visiitkaardistuudio</title>
     <style>        
         body {
-            overflow: hidden; 
+            /* overflow: hidden;  */
         background: rgb(204,204,204);         
         }
         page {
@@ -50,6 +50,7 @@
         }
         }
         textarea{
+            resize: none;
             text-align: left;
             padding-top: 40px;
             padding-left: 20px;
@@ -72,39 +73,39 @@
                     <textarea name="" id="div1" cols="30" rows="6" width="100%" onchange="myFunction()"></textarea>
                 </td>
                 <td width="50%" height="20%">
-                    <textarea name="" id="div2" cols="30" rows="6" width="100%"></textarea>
+                    <textarea name="" id="div2" cols="30" rows="6" width="100%" readonly></textarea>
                 </td>
             </tr>
             <tr>
                 <td width="50%" height="20%">
-                    <textarea name="" id="div3" cols="30" rows="6" width="100%"></textarea>
+                    <textarea name="" id="div3" cols="30" rows="6" width="100%" readonly></textarea>
                 </td>
                 <td width="50%" height="20%">
-                    <textarea name="" id="div4" cols="30" rows="6" width="100%"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td width="50%" height="20%">
-                    <textarea name="" id="div5" cols="30" rows="6" width="100%"></textarea>
-                </td>
-                <td width="50%" height="20%">
-                    <textarea name="" id="div6" cols="30" rows="6" width="100%"></textarea>
+                    <textarea name="" id="div4" cols="30" rows="6" width="100%" readonly></textarea>
                 </td>
             </tr>
             <tr>
                 <td width="50%" height="20%">
-                    <textarea name="" id="div7" cols="30" rows="6" width="100%"></textarea>
+                    <textarea name="" id="div5" cols="30" rows="6" width="100%" readonly></textarea>
                 </td>
                 <td width="50%" height="20%">
-                    <textarea name="" id="div8" cols="30" rows="6" width="100%"></textarea>
+                    <textarea name="" id="div6" cols="30" rows="6" width="100%" readonly></textarea>
                 </td>
             </tr>
             <tr>
                 <td width="50%" height="20%">
-                    <textarea name="" id="div9" cols="30" rows="6" width="100%"></textarea>
+                    <textarea name="" id="div7" cols="30" rows="6" width="100%" readonly></textarea>
                 </td>
                 <td width="50%" height="20%">
-                    <textarea name="" id="div10" cols="30" rows="6" width="100%"></textarea>
+                    <textarea name="" id="div8" cols="30" rows="6" width="100%" readonly></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div9" cols="30" rows="6" width="100%" readonly></textarea>
+                </td>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div10" cols="30" rows="6" width="100%" readonly></textarea>
                 </td>
             </tr>
         </table>
@@ -114,6 +115,7 @@
         function myFunction(){
             console.log('hello');
             x = document.getElementById("div1").value;
+            document.getElementById("div1").innerHTML = x;
             document.getElementById("div2").innerHTML = x;
             document.getElementById("div3").innerHTML = x;
             document.getElementById("div4").innerHTML = x;
@@ -123,7 +125,6 @@
             document.getElementById("div8").innerHTML = x;
             document.getElementById("div9").innerHTML = x;
             document.getElementById("div10").innerHTML = x;
-            document.getElementById("div1").innerHTML = x;
         }
     </script>
 </body>
