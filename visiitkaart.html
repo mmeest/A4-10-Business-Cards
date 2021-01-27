@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiitkaardistuudio</title>
+    <style>        
+        body {
+            overflow: hidden; 
+        background: rgb(204,204,204);         
+        }
+        page {
+        background: white;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5cm;
+        box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+        }
+        page[size="A4"] {  
+        width: 21cm;
+        height: 29.7cm; 
+        /* background-image: url("pirates.jpg"); */
+        background-repeat: no-repeat;
+        background-size: 21cm 29.7cm;
+        }
+        page[size="A4"][layout="landscape"] {
+        width: 29.7cm;
+        height: 21cm;  
+        }
+        page[size="A3"] {
+        width: 29.7cm;
+        height: 42cm;
+        }
+        page[size="A3"][layout="landscape"] {
+        width: 42cm;
+        height: 29.7cm;  
+        }
+        page[size="A5"] {
+        width: 14.8cm;
+        height: 21cm;
+        }
+        page[size="A5"][layout="landscape"] {
+        width: 21cm;
+        height: 14.8cm;  
+        }
+        @media print {
+        body, page {
+            margin: 0;
+            box-shadow: 0;
+        }
+        }
+        textarea{
+            text-align: left;
+            padding-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            overflow: hidden; 
+            font-family: 'Times New Roman', Times, serif;
+            font-size: x-large;
+            font-weight: bold;
+            width: 100%;
+            height: 100%; 
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <page size="A4">
+        <table border="0" width="100%" bordercolor="#000000" style="border-collapse: collapse" height="100%">
+            <tr>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div1" cols="30" rows="6" width="100%" onchange="myFunction()"></textarea>
+                </td>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div2" cols="30" rows="6" width="100%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div3" cols="30" rows="6" width="100%"></textarea>
+                </td>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div4" cols="30" rows="6" width="100%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div5" cols="30" rows="6" width="100%"></textarea>
+                </td>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div6" cols="30" rows="6" width="100%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div7" cols="30" rows="6" width="100%"></textarea>
+                </td>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div8" cols="30" rows="6" width="100%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div9" cols="30" rows="6" width="100%"></textarea>
+                </td>
+                <td width="50%" height="20%">
+                    <textarea name="" id="div10" cols="30" rows="6" width="100%"></textarea>
+                </td>
+            </tr>
+        </table>
+    </page>
+    <script>
+        var x = '';
+        function myFunction(){
+            console.log('hello');
+            x = document.getElementById("div1").value;
+            document.getElementById("div2").innerHTML = x;
+            document.getElementById("div3").innerHTML = x;
+            document.getElementById("div4").innerHTML = x;
+            document.getElementById("div5").innerHTML = x;
+            document.getElementById("div6").innerHTML = x;
+            document.getElementById("div7").innerHTML = x;
+            document.getElementById("div8").innerHTML = x;
+            document.getElementById("div9").innerHTML = x;
+            document.getElementById("div10").innerHTML = x;
+            document.getElementById("div1").innerHTML = x;
+        }
+    </script>
+</body>
+</html>
